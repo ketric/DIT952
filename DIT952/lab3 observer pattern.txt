@@ -1,0 +1,14 @@
+Why does he use the observer pattern?
+The creator of the Tetris, we assume did this unintentionally because his project does not follow 
+the MVC pattern at all. The observer pattern should normally be used for the MVC and since he didnt
+follow the MVC, maybe he thought that in the future if he would like to add a new interface (Observer)
+he would simply only need to make board (Observable) implement it.
+
+
+
+When is the observer pattern used?
+The board is the Observable in this case and the TickListener is the Observer meanwhile the 
+NextShapeGui is the ConcreteObservable. So we found traces of the observer pattern being used 
+when we saw that the Board had a list of TickListener and then has a method of adding the TickListener
+and the method tick invokes TickListener in a loop. In the GameRunner we found that the NextShapeGui
+implements the Ticklistener so that is how we interpreted it as the project having an observer pattern.

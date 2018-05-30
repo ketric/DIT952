@@ -1,0 +1,19 @@
+===TETRIS DESIGN PATTERNS===
+1. Factory: RotatorFactory -> AntiClockwiseRotator,ClockwiseRotator
+2. Template: AbstractRotator, uses an abstract function for it's subclasses
+3. Observer: Board is the observable the ticklistener is the observer and the nextShapeGui
+is the concrete observer. Board has a list of TickListener and adds it then invokes it in a loop.
+
+===Bad Build of the code:===
+1. Doesn't follow MVC
+	-KeyListeners are in GameRunner. (keyPressed)
+	-GameRunner renders the world. (newApp)
+2. Breaks SRP - Single responsibility principle
+	-Board - ShapeLayoutToBoardCellMapper has too much coupling and the ShapeLayoutToBoardCellMapper
+is too dependant on the board, it has way too many different methods in it. Rotator,Movement,
+new positions, even creates new shapes...
+3. Breaks OCP
+	-max size of cells is 4 and in AbstractRotator it rotates a matrix it never uses a shape.
+	so if we were to add a new shape that is bigger than all the other shapes we would have to
+	change the dimensions of the cells in the shape class. Also we would have to change
+	anything that uses Shape has to be modified.
