@@ -1,0 +1,13 @@
+IN STRATEGY PATTERN, A CLASS BEHAVIOUR OR ITS ALGORITHM CAN BE CHANGED AT RUN TIME,
+IN OUR CASE IT CAN CHOOSE BETWEEN +,-,*
+
+In Strategy pattern, we create objects which represent various strategies
+and a context object whose behavior varies as per its strategy object.
+The strategy object changes the executing algorithm of the context object.
+
+
+HOW TO DO THE STRATEGY PATTERN:
+
+We create a Strategy interface defining an action and create classes to implement the Strategy interface.
+We create a Context class which uses Strategy and executes it. StrategyPatternDemo uses context and Strategy
+to demonstrate change in Context behaviour based on Strategy it deploys or uses.
