@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="mediaplayer">
-    <CLASSES>
-      <root url="jar://C:/Program Files (x86)/JMF2.1.1e/lib/mediaplayer.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
